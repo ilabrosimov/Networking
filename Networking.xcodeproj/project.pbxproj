@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		04B8B26126886FB400A4ACBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B26026886FB400A4ACBF /* AppDelegate.swift */; };
 		04B8B26326886FB400A4ACBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B26226886FB400A4ACBF /* SceneDelegate.swift */; };
-		04B8B26526886FB400A4ACBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B26426886FB400A4ACBF /* ViewController.swift */; };
+		04B8B26526886FB400A4ACBF /* FoodTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B26426886FB400A4ACBF /* FoodTimeViewController.swift */; };
 		04B8B26826886FB400A4ACBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B8B26626886FB400A4ACBF /* Main.storyboard */; };
 		04B8B26A26886FB800A4ACBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B8B26926886FB800A4ACBF /* Assets.xcassets */; };
 		04B8B26D26886FB800A4ACBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B8B26B26886FB800A4ACBF /* LaunchScreen.storyboard */; };
+		04B8B2752688760F00A4ACBF /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B2742688760F00A4ACBF /* FoodCell.swift */; };
+		04B8B27726887AE800A4ACBF /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27626887AE800A4ACBF /* FoodModel.swift */; };
+		04B8B27B2688886800A4ACBF /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27A2688886800A4ACBF /* RecipeCell.swift */; };
+		04B8B27D268888CD00A4ACBF /* RecipeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27C268888CD00A4ACBF /* RecipeCollectionViewController.swift */; };
+		04B8B27F26888B8600A4ACBF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27E26888B8600A4ACBF /* NetworkingManager.swift */; };
+		04EAE7692688D21A00A75065 /* FoodTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAE7682688D21A00A75065 /* FoodTimeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04B8B25D26886FB400A4ACBF /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B8B26026886FB400A4ACBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B8B26226886FB400A4ACBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04B8B26426886FB400A4ACBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04B8B26426886FB400A4ACBF /* FoodTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTimeViewController.swift; sourceTree = "<group>"; };
 		04B8B26726886FB400A4ACBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04B8B26926886FB800A4ACBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B8B26C26886FB800A4ACBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B8B26E26886FB800A4ACBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B8B2742688760F00A4ACBF /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		04B8B27626887AE800A4ACBF /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		04B8B27A2688886800A4ACBF /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		04B8B27C268888CD00A4ACBF /* RecipeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewController.swift; sourceTree = "<group>"; };
+		04B8B27E26888B8600A4ACBF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		04EAE7682688D21A00A75065 /* FoodTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTimeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,61 @@
 		04B8B25F26886FB400A4ACBF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				04B8B26026886FB400A4ACBF /* AppDelegate.swift */,
-				04B8B26226886FB400A4ACBF /* SceneDelegate.swift */,
-				04B8B26426886FB400A4ACBF /* ViewController.swift */,
-				04B8B26626886FB400A4ACBF /* Main.storyboard */,
-				04B8B26926886FB800A4ACBF /* Assets.xcassets */,
-				04B8B26B26886FB800A4ACBF /* LaunchScreen.storyboard */,
-				04B8B26E26886FB800A4ACBF /* Info.plist */,
+				04B8B27E26888B8600A4ACBF /* NetworkingManager.swift */,
+				04EAE76B2688D23300A75065 /* Models */,
+				04EAE76A2688D22600A75065 /* ViewControllers */,
+				04EAE76C2688D2A300A75065 /* Views */,
+				04EAE76D2688D2B000A75065 /* Storyboards */,
+				04EAE76E2688D2C600A75065 /* Supporting files */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		04EAE76A2688D22600A75065 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04B8B26426886FB400A4ACBF /* FoodTimeViewController.swift */,
+				04B8B27C268888CD00A4ACBF /* RecipeCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04EAE76B2688D23300A75065 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04B8B27626887AE800A4ACBF /* FoodModel.swift */,
+				04EAE7682688D21A00A75065 /* FoodTimeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04EAE76C2688D2A300A75065 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04B8B2742688760F00A4ACBF /* FoodCell.swift */,
+				04B8B27A2688886800A4ACBF /* RecipeCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04EAE76D2688D2B000A75065 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04B8B26626886FB400A4ACBF /* Main.storyboard */,
+				04B8B26B26886FB800A4ACBF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		04EAE76E2688D2C600A75065 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				04B8B26026886FB400A4ACBF /* AppDelegate.swift */,
+				04B8B26226886FB400A4ACBF /* SceneDelegate.swift */,
+				04B8B26926886FB800A4ACBF /* Assets.xcassets */,
+				04B8B26E26886FB800A4ACBF /* Info.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B8B26526886FB400A4ACBF /* ViewController.swift in Sources */,
+				04B8B27D268888CD00A4ACBF /* RecipeCollectionViewController.swift in Sources */,
+				04B8B27726887AE800A4ACBF /* FoodModel.swift in Sources */,
+				04B8B26526886FB400A4ACBF /* FoodTimeViewController.swift in Sources */,
+				04B8B27F26888B8600A4ACBF /* NetworkingManager.swift in Sources */,
+				04B8B27B2688886800A4ACBF /* RecipeCell.swift in Sources */,
+				04EAE7692688D21A00A75065 /* FoodTimeModel.swift in Sources */,
+				04B8B2752688760F00A4ACBF /* FoodCell.swift in Sources */,
 				04B8B26126886FB400A4ACBF /* AppDelegate.swift in Sources */,
 				04B8B26326886FB400A4ACBF /* SceneDelegate.swift in Sources */,
 			);
@@ -287,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
