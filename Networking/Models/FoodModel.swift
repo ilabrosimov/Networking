@@ -21,6 +21,21 @@ struct Hit: Codable {
 
 // MARK: - Recipe
 struct Recipe: Codable {
-    let image: String 
+    let label: String
+    let image: String
+    let ingredients: [Ingredient]
 }
+// MARK: - Ingredient
+struct Ingredient: Codable {
+    let text: String
+    let weight: Double
+    let foodCategory: String?
+    let foodID: String
+    let image: String?
 
+    enum CodingKeys: String, CodingKey {
+        case text, weight, foodCategory
+        case foodID = "foodId"
+        case image
+    }
+}

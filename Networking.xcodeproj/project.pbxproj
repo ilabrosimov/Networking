@@ -19,6 +19,8 @@
 		04B8B27B2688886800A4ACBF /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27A2688886800A4ACBF /* RecipeCell.swift */; };
 		04B8B27D268888CD00A4ACBF /* RecipeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27C268888CD00A4ACBF /* RecipeCollectionViewController.swift */; };
 		04B8B27F26888B8600A4ACBF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27E26888B8600A4ACBF /* NetworkingManager.swift */; };
+		04CF101F268B387200CE738F /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF101E268B387200CE738F /* IngredientTableViewController.swift */; };
+		04CF1021268B389200CE738F /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1020268B389200CE738F /* IngredientCell.swift */; };
 		04EAE7692688D21A00A75065 /* FoodTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAE7682688D21A00A75065 /* FoodTimeModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		04B8B27A2688886800A4ACBF /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		04B8B27C268888CD00A4ACBF /* RecipeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewController.swift; sourceTree = "<group>"; };
 		04B8B27E26888B8600A4ACBF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		04CF101E268B387200CE738F /* IngredientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
+		04CF1020268B389200CE738F /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		04EAE7682688D21A00A75065 /* FoodTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTimeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,7 @@
 		04EAE76A2688D22600A75065 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				04CF101E268B387200CE738F /* IngredientTableViewController.swift */,
 				04B8B26426886FB400A4ACBF /* FoodTimeViewController.swift */,
 				04B8B27C268888CD00A4ACBF /* RecipeCollectionViewController.swift */,
 			);
@@ -133,6 +138,7 @@
 			children = (
 				04B8B2742688760F00A4ACBF /* FoodCell.swift */,
 				04B8B27A2688886800A4ACBF /* RecipeCell.swift */,
+				04CF1020268B389200CE738F /* IngredientCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 				04B8B27F26888B8600A4ACBF /* NetworkingManager.swift in Sources */,
 				04B8B27B2688886800A4ACBF /* RecipeCell.swift in Sources */,
 				04EAE7692688D21A00A75065 /* FoodTimeModel.swift in Sources */,
+				04CF1021268B389200CE738F /* IngredientCell.swift in Sources */,
+				04CF101F268B387200CE738F /* IngredientTableViewController.swift in Sources */,
 				04B8B2752688760F00A4ACBF /* FoodCell.swift in Sources */,
 				04B8B26126886FB400A4ACBF /* AppDelegate.swift in Sources */,
 				04B8B26326886FB400A4ACBF /* SceneDelegate.swift in Sources */,
@@ -396,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -451,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -467,6 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 829WZFB9S5;
 				INFOPLIST_FILE = "Networking/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -485,6 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 829WZFB9S5;
 				INFOPLIST_FILE = "Networking/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
