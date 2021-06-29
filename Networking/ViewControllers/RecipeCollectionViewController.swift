@@ -10,31 +10,25 @@ import UIKit
 class RecipeCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+
+// MARK: - Private propereties
     var foodTime:String?
     private var food: Food?
-    
-    
+
+// MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.activityIndicator.startAnimating()
         
-        let url = URL(string: "https://api.edamam.com/api/recipes/v2?type=public&app_id=ec8bc526&app_key=ceea9a0eaf3cd0564d23cd7fc2edf6f5&diet=balanced&mealType=\(foodTime ?? "")&imageSize=THUMBNAIL&field=image")!
-        let session = URLSession.shared
-        session.dataTask(with: url) {(data,_,error) in
-            
-            do {
-                self.food = try JSONDecoder().decode(Food.self, from: data!)
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                    self.activityIndicator.stopAnimating()
-                    self.activityIndicator.hidesWhenStopped = true
-                }
-                
-            } catch let error {
-                print(error)
+        NetworkManager.fetchData (url: "https://api.edamam.com/api/recipes/v2?type=public&app_id=ec8bc526&app_key=ceea9a0eaf3cd0564d23cd7fc2edf6f5&diet=balanced&mealType=\(foodTime ?? "")&imageSize=THUMBNAIL&field=image"){ food in
+            self.food = food
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.hidesWhenStopped = true
             }
-        }.resume()
+        }
     }
     
 // MARK: - Private methods
@@ -51,11 +45,6 @@ class RecipeCollectionViewController: UICollectionViewController {
         }
     }
     // MARK: - UICollectionViewDataSource
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.food?.hits.count ?? 0

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0473FEAB268AD7F400A8D652 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473FEAA268AD7F400A8D652 /* NetworkingTests.swift */; };
 		04B8B26126886FB400A4ACBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B26026886FB400A4ACBF /* AppDelegate.swift */; };
 		04B8B26326886FB400A4ACBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B26226886FB400A4ACBF /* SceneDelegate.swift */; };
 		04B8B26526886FB400A4ACBF /* FoodTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B26426886FB400A4ACBF /* FoodTimeViewController.swift */; };
@@ -21,7 +22,20 @@
 		04EAE7692688D21A00A75065 /* FoodTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAE7682688D21A00A75065 /* FoodTimeModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0473FEAD268AD7F400A8D652 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04B8B25526886FB400A4ACBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04B8B25C26886FB400A4ACBF;
+			remoteInfo = Networking;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0473FEA8268AD7F400A8D652 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0473FEAA268AD7F400A8D652 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		0473FEAC268AD7F400A8D652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B8B25D26886FB400A4ACBF /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B8B26026886FB400A4ACBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B8B26226886FB400A4ACBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0473FEA5268AD7F400A8D652 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04B8B25A26886FB400A4ACBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +70,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0473FEA9268AD7F400A8D652 /* NetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				0473FEAA268AD7F400A8D652 /* NetworkingTests.swift */,
+				0473FEAC268AD7F400A8D652 /* Info.plist */,
+			);
+			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
 		04B8B25426886FB400A4ACBF = {
 			isa = PBXGroup;
 			children = (
 				04B8B25F26886FB400A4ACBF /* Networking */,
+				0473FEA9268AD7F400A8D652 /* NetworkingTests */,
 				04B8B25E26886FB400A4ACBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				04B8B25D26886FB400A4ACBF /* Networking.app */,
+				0473FEA8268AD7F400A8D652 /* NetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +160,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0473FEA7268AD7F400A8D652 /* NetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0473FEB1268AD7F400A8D652 /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
+			buildPhases = (
+				0473FEA4268AD7F400A8D652 /* Sources */,
+				0473FEA5268AD7F400A8D652 /* Frameworks */,
+				0473FEA6268AD7F400A8D652 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0473FEAE268AD7F400A8D652 /* PBXTargetDependency */,
+			);
+			name = NetworkingTests;
+			productName = NetworkingTests;
+			productReference = 0473FEA8268AD7F400A8D652 /* NetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		04B8B25C26886FB400A4ACBF /* Networking */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04B8B27126886FB800A4ACBF /* Build configuration list for PBXNativeTarget "Networking" */;
@@ -154,6 +204,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					0473FEA7268AD7F400A8D652 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 04B8B25C26886FB400A4ACBF;
+					};
 					04B8B25C26886FB400A4ACBF = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -173,11 +227,19 @@
 			projectRoot = "";
 			targets = (
 				04B8B25C26886FB400A4ACBF /* Networking */,
+				0473FEA7268AD7F400A8D652 /* NetworkingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0473FEA6268AD7F400A8D652 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04B8B25B26886FB400A4ACBF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,6 +253,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0473FEA4268AD7F400A8D652 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0473FEAB268AD7F400A8D652 /* NetworkingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04B8B25926886FB400A4ACBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +278,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0473FEAE268AD7F400A8D652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04B8B25C26886FB400A4ACBF /* Networking */;
+			targetProxy = 0473FEAD268AD7F400A8D652 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04B8B26626886FB400A4ACBF /* Main.storyboard */ = {
@@ -229,6 +307,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0473FEAF268AD7F400A8D652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ilabrosimov.NetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking.app/Networking";
+			};
+			name = Debug;
+		};
+		0473FEB0268AD7F400A8D652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ilabrosimov.NetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking.app/Networking";
+			};
+			name = Release;
+		};
 		04B8B26F26886FB800A4ACBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,6 +500,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0473FEB1268AD7F400A8D652 /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0473FEAF268AD7F400A8D652 /* Debug */,
+				0473FEB0268AD7F400A8D652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		04B8B25826886FB400A4ACBF /* Build configuration list for PBXProject "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
