@@ -3,7 +3,7 @@ import UIKit
 
 class NetworkManager {
     
-    static func fetchData(url: String, complition: @escaping (_ food: Food) -> ()) {
+    static func fetchDataUrlSession(url: String, complition: @escaping (_ food: Food) -> ()) {
         guard let url = URL(string: url) else {return}
         let session = URLSession.shared
         session.dataTask(with: url) {(data, _ , error) in
