@@ -1,21 +1,33 @@
 
 // MARK: - Food
 struct Food: Codable {
-    let from, to, count: Int
     let hits: [Hit]
-
+    
     enum CodingKeys: String, CodingKey {
-        case from, to, count
         case hits
     }
+    init?(hits: [Hit]) {
+        self.hits = hits
+    }
+    
+    init?(json: [String: Any]) {
+        guard let hits = json["hits"] as? [Hit] else {return nil}
+        self.hits = hits
+    }
+   
 }
 
 // MARK: - Hit
 struct Hit: Codable {
     let recipe: Recipe
-
-    enum CodingKeys: String, CodingKey {
-        case recipe
+    
+    init?(recipe: Recipe) {
+        self.recipe = recipe
+    }
+    
+    init?(json: [String: Any]) {
+        let recipe = json["recipe"] as? Recipe
+        self.recipe = recipe!
     }
 }
 
@@ -24,18 +36,31 @@ struct Recipe: Codable {
     let label: String
     let image: String
     let ingredients: [Ingredient]
+    
+    init?(label: String, image: String, ingredients: [Ingredient]) {
+        self.label = label
+        self.image = image
+        self.ingredients = ingredients
+    }
+    init?(json: [String: Any]) {
+        let label = json["label"] as? String
+        let image = json["image"] as? String
+        let ingredients = json["ingredients"] as? [Ingredient]
+        self.label = label!
+        self.image = image!
+        self.ingredients = ingredients!
+        
+    }
 }
 // MARK: - Ingredient
 struct Ingredient: Codable {
     let text: String
-    let weight: Double
-    let foodCategory: String?
-    let foodID: String
-    let image: String?
-
-    enum CodingKeys: String, CodingKey {
-        case text, weight, foodCategory
-        case foodID = "foodId"
-        case image
+    
+    init?(text: String) {
+        self.text = text
+    }
+    init?(json: [String:Any]) {
+        let text = json["text"] as? String
+        self.text = text!
     }
 }

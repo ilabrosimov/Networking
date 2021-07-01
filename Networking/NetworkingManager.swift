@@ -1,5 +1,5 @@
 import UIKit
-
+import Alamofire
 
 class NetworkManager {
     
@@ -18,4 +18,25 @@ class NetworkManager {
             
         }.resume()
     }
+    static func fetchDataAlamofire ( url: String) {
+        guard let url = URL(string: url) else {return}
+        AF.request(url)
+            .validate()
+            .responseJSON { (dataResponse) in
+                
+                switch dataResponse.result {
+                case .success(let value) :
+                    
+                    guard let foodData = value as? [String: Any] else {return}
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        
+    }
 }
+                
+                
+                    
+                
+                    

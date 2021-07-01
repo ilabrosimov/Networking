@@ -8,16 +8,16 @@
 import UIKit
 
 class FoodTimeViewController: UICollectionViewController {
-
+    
 // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        foodTime.count
+        return FoodTime.allCases.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodCell", for: indexPath) as! FoodCell
         
         cell.layer.cornerRadius = 20
-        cell.labelCell.text = foodTime[indexPath.item]
+        cell.labelCell.text = FoodTime.allCases[indexPath.row].rawValue
         return cell
     }
     

@@ -29,14 +29,15 @@ class RecipeCollectionViewController: UICollectionViewController {
                 self.activityIndicator.hidesWhenStopped = true
             }
         }
+        NetworkManager.fetchDataAlamofire(url: "https://api.edamam.com/api/recipes/v2?type=public&app_id=ec8bc526&app_key=ceea9a0eaf3cd0564d23cd7fc2edf6f5&diet=balanced&mealType=\(foodTime ?? "")")
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ingredientSegue" {
             guard let ingredintVC = segue.destination as? IngredientTableViewController else {return}
             if currentRecipe != nil {
                 ingredintVC.recipe = food?.hits[currentRecipe!].recipe
-            }
-            
+            }   
         }
     }
   
