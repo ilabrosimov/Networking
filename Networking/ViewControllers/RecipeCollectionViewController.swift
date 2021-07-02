@@ -15,23 +15,28 @@ class RecipeCollectionViewController: UICollectionViewController {
     var foodTime:String?
     private var food: Food?
     private var currentRecipe: Int?
+    
     // MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.activityIndicator.startAnimating()
         
-        NetworkManager.fetchDataUrlSession (url: "https://api.edamam.com/api/recipes/v2?type=public&app_id=ec8bc526&app_key=ceea9a0eaf3cd0564d23cd7fc2edf6f5&diet=balanced&mealType=\(foodTime ?? "")"){ food in
+//        NetworkManager.fetchDataUrlSession (url: "https://api.edamam.com/api/recipes/v2?type=public&app_id=ec8bc526&app_key=ceea9a0eaf3cd0564d23cd7fc2edf6f5&diet=balanced&mealType=\(foodTime ?? "")"){ food in
+//            self.food = food
+//            DispatchQueue.main.async {
+//                self.reloadCollectionAndStopAnimation()
+//            }
+//        }
+        NetworkManager.fetchDataAlamofire(url: "https://api.edamam.com/api/recipes/v2?type=public&app_id=ec8bc526&app_key=ceea9a0eaf3cd0564d23cd7fc2edf6f5&diet=balanced&mealType=\(foodTime ?? "")") {food in
             self.food = food
             DispatchQueue.main.async {
-                self.collectionView.reloadData()
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.hidesWhenStopped = true
+                self.reloadCollectionAndStopAnimation()
             }
         }
-        NetworkManager.fetchDataAlamofire(url: "https://api.edamam.com/api/recipes/v2?type=public&app_id=ec8bc526&app_key=ceea9a0eaf3cd0564d23cd7fc2edf6f5&diet=balanced&mealType=\(foodTime ?? "")")
         
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ingredientSegue" {
             guard let ingredintVC = segue.destination as? IngredientTableViewController else {return}
@@ -71,7 +76,14 @@ class RecipeCollectionViewController: UICollectionViewController {
             }
         }
     }
+    
+    private func reloadCollectionAndStopAnimation () {
+        self.collectionView.reloadData()
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.hidesWhenStopped = true
+    }
 }
+
 
 // MARK: - Extention UICollectionViewDelegateFlowLayout
 

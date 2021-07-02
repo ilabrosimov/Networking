@@ -9,7 +9,9 @@ import UIKit
 
 
 class IngredientTableViewController: UITableViewController {
+    
     var recipe: Recipe?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")

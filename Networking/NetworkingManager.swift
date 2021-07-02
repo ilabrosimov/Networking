@@ -18,21 +18,22 @@ class NetworkManager {
             
         }.resume()
     }
-    static func fetchDataAlamofire ( url: String) {
+ 
+    static func fetchDataAlamofire (url: String, complition: @escaping (Food)->()) {
         guard let url = URL(string: url) else {return}
         AF.request(url)
             .validate()
-            .responseJSON { (dataResponse) in
+            .responseDecodable (of: Food.self){ (response) in
                 
-                switch dataResponse.result {
-                case .success(let value) :
+                switch response.result {
+                case .success(let value):
+                    complition(value)
                     
-                    guard let foodData = value as? [String: Any] else {return}
                 case .failure(let error):
                     print(error)
                 }
-            }
-        
+                
+            }.resume()
     }
 }
                 
