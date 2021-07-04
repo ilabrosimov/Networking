@@ -36,6 +36,4 @@ class IngredientTableViewController: UITableViewController {
         cell.textLabel?.text = recipe?.ingredients[indexPath.row].text
         return cell
     }
-    
-
 }

@@ -22,12 +22,7 @@ class RecipeCollectionViewController: UICollectionViewController {
         
         self.activityIndicator.startAnimating()
         
-//        NetworkManager.fetchDataUrlSession (url: "https://api.edamam.com/api/recipes/v2?type=public&app_id=ec8bc526&app_key=ceea9a0eaf3cd0564d23cd7fc2edf6f5&diet=balanced&mealType=\(foodTime ?? "")"){ food in
-//            self.food = food
-//            DispatchQueue.main.async {
-//                self.reloadCollectionAndStopAnimation()
-//            }
-//        }
+
         NetworkManager.fetchDataAlamofire(url: "https://api.edamam.com/api/recipes/v2?type=public&app_id=ec8bc526&app_key=ceea9a0eaf3cd0564d23cd7fc2edf6f5&diet=balanced&mealType=\(foodTime ?? "")") {food in
             self.food = food
             DispatchQueue.main.async {
@@ -67,14 +62,7 @@ class RecipeCollectionViewController: UICollectionViewController {
     // MARK: - Private methods
     private func configureCollectionCell (cell: RecipeCell, indexPath: IndexPath) {
         
-        DispatchQueue.global().async {
-            guard let imageUrl = URL(string: self.food!.hits[indexPath.item].recipe.image ) else {return }
-            guard let imageData = try? Data(contentsOf: imageUrl) else {return }
-            
-            DispatchQueue.main.async {
-                cell.imageView.image = UIImage(data: imageData )
-            }
-        }
+                cell.imageView.fetchImage(from: self.food!.hits[indexPath.item].recipe.image )
     }
     
     private func reloadCollectionAndStopAnimation () {

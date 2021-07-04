@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		042E8DC92691AF4F001B9B45 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E8DC82691AF4F001B9B45 /* ImageManager.swift */; };
+		042E8DCB2691BE9C001B9B45 /* RecipeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E8DCA2691BE9C001B9B45 /* RecipeImageView.swift */; };
 		043AA9CB268CE48400F29761 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043AA9CA268CE48400F29761 /* Alamofire.framework */; };
 		043AA9CC268CE48400F29761 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 043AA9CA268CE48400F29761 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0473FEAB268AD7F400A8D652 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473FEAA268AD7F400A8D652 /* NetworkingTests.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		042E8DC82691AF4F001B9B45 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		042E8DCA2691BE9C001B9B45 /* RecipeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImageView.swift; sourceTree = "<group>"; };
 		043AA9CA268CE48400F29761 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Build/Alamofire.xcframework/ios-arm64_i386_x86_64-simulator/Alamofire.framework"; sourceTree = "<group>"; };
 		0473FEA8268AD7F400A8D652 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0473FEAA268AD7F400A8D652 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				04B8B2742688760F00A4ACBF /* FoodCell.swift */,
 				04B8B27A2688886800A4ACBF /* RecipeCell.swift */,
 				04CF1020268B389200CE738F /* IngredientCell.swift */,
+				042E8DCA2691BE9C001B9B45 /* RecipeImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				04B8B26526886FB400A4ACBF /* FoodTimeViewController.swift in Sources */,
 				042E8DC92691AF4F001B9B45 /* ImageManager.swift in Sources */,
 				04B8B27F26888B8600A4ACBF /* NetworkingManager.swift in Sources */,
+				042E8DCB2691BE9C001B9B45 /* RecipeImageView.swift in Sources */,
 				04B8B27B2688886800A4ACBF /* RecipeCell.swift in Sources */,
 				04EAE7692688D21A00A75065 /* FoodTimeModel.swift in Sources */,
 				04CF1021268B389200CE738F /* IngredientCell.swift in Sources */,

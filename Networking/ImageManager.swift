@@ -6,6 +6,11 @@
 //
 import Foundation
 class ImageManager {
+    
+    static var shared = ImageManager()
+    private init() {}
+    
+    //загружаем из сети картинку с помощью URLSession
     func getImage (url: URL, completion: @escaping (Data, URLResponse) -> ()) {
         URLSession.shared.dataTask(with: url) { date, response, error in
             guard let data = date, let response = response else {
