@@ -23,7 +23,7 @@ class NetworkManager {
         guard let url = URL(string: url) else {return}
         AF.request(url)
             .validate()
-            .responseDecodable (of: Food.self){ (response) in
+            .responseDecodable (of: Food.self) { response in
                 
                 switch response.result {
                 case .success(let value):
@@ -35,6 +35,7 @@ class NetworkManager {
                 
             }.resume()
     }
+    
 }
                 
                 
