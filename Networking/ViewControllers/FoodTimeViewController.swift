@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FoodTimeViewController: UICollectionViewController {
+final class FoodTimeViewController: UICollectionViewController {
     
 // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

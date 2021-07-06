@@ -23,6 +23,7 @@
 		04B8B27B2688886800A4ACBF /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27A2688886800A4ACBF /* RecipeCell.swift */; };
 		04B8B27D268888CD00A4ACBF /* RecipeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27C268888CD00A4ACBF /* RecipeCollectionViewController.swift */; };
 		04B8B27F26888B8600A4ACBF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B27E26888B8600A4ACBF /* NetworkingManager.swift */; };
+		04BF7E912694162E00357E0D /* CacheImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF7E902694162E00357E0D /* CacheImageManager.swift */; };
 		04CF101F268B387200CE738F /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF101E268B387200CE738F /* IngredientTableViewController.swift */; };
 		04CF1021268B389200CE738F /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1020268B389200CE738F /* IngredientCell.swift */; };
 		04EAE7692688D21A00A75065 /* FoodTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAE7682688D21A00A75065 /* FoodTimeModel.swift */; };
@@ -72,6 +73,7 @@
 		04B8B27A2688886800A4ACBF /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		04B8B27C268888CD00A4ACBF /* RecipeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewController.swift; sourceTree = "<group>"; };
 		04B8B27E26888B8600A4ACBF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		04BF7E902694162E00357E0D /* CacheImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageManager.swift; sourceTree = "<group>"; };
 		04CF101E268B387200CE738F /* IngredientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
 		04CF1020268B389200CE738F /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		04EAE7682688D21A00A75065 /* FoodTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTimeModel.swift; sourceTree = "<group>"; };
@@ -108,6 +110,9 @@
 		048745C0268EEE0800D60D5E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				04B8B27E26888B8600A4ACBF /* NetworkingManager.swift */,
+				042E8DC82691AF4F001B9B45 /* ImageManager.swift */,
+				04BF7E902694162E00357E0D /* CacheImageManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -135,8 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				048745C0268EEE0800D60D5E /* Service */,
-				04B8B27E26888B8600A4ACBF /* NetworkingManager.swift */,
-				042E8DC82691AF4F001B9B45 /* ImageManager.swift */,
 				04EAE76B2688D23300A75065 /* Models */,
 				04EAE76A2688D22600A75065 /* ViewControllers */,
 				04EAE76C2688D2A300A75065 /* Views */,
@@ -319,6 +322,7 @@
 				042E8DC92691AF4F001B9B45 /* ImageManager.swift in Sources */,
 				04B8B27F26888B8600A4ACBF /* NetworkingManager.swift in Sources */,
 				042E8DCB2691BE9C001B9B45 /* RecipeImageView.swift in Sources */,
+				04BF7E912694162E00357E0D /* CacheImageManager.swift in Sources */,
 				04B8B27B2688886800A4ACBF /* RecipeCell.swift in Sources */,
 				04EAE7692688D21A00A75065 /* FoodTimeModel.swift in Sources */,
 				04CF1021268B389200CE738F /* IngredientCell.swift in Sources */,

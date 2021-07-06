@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecipeCollectionViewController: UICollectionViewController {
+final class RecipeCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 

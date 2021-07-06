@@ -8,19 +8,19 @@
 import UIKit
 
 
-class IngredientTableViewController: UITableViewController {
+final class IngredientTableViewController: UITableViewController {
     
     var recipe: Recipe?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        navigationItem.title = "List of ingredients"
+        navigationItem.title = recipe?.label ?? ""
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return recipe?.label ?? ""
+        return "List of ingredients"
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
